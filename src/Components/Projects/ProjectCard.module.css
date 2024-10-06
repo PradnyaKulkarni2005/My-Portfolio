@@ -1,0 +1,132 @@
+@import "../../var.css";
+
+.outer .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-image: url(https://img.freepik.com/premium-vector/blue-soft-indigo-gradient-background-design_901408-12607.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 16px 14px 0 #04152d !important;
+    padding: 18px 24px;
+    max-width: 345px;
+    margin-bottom: 20px; /* Ensure space between cards */
+}
+
+.image {
+    margin-bottom: 26px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.skills {
+    width: 100%;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+
+.skill {
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 100px; 
+    background: var(--color-dark);
+    padding: 2px 22px;
+}
+
+.links {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 100px;
+    background: rgb(44, 31, 193);
+    padding: 4px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .outer {
+        margin: auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px; /* Smaller gap between cards */
+    }
+
+    .card {
+        width: 90%; /* Make the card take 90% of the viewport width */
+        max-width: 100%; 
+        padding: 16px 18px; /* Reduced padding for mobile */
+        box-shadow: none;
+        margin-left: 150px;
+    }
+
+    .title {
+        font-size: 22px; /* Slightly smaller title font */
+    }
+
+    .description {
+        font-size: 18px; /* Smaller description font size */
+    }
+
+    .skills {
+        gap: 4px; /* Smaller gap between skills */
+    }
+
+    .skill {
+        font-size: 18px; /* Smaller skill font size */
+        padding: 2px 12px; /* Adjusted padding */
+    }
+
+    .link {
+        font-size: 22px; /* Smaller font size for links */
+        padding: 2px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 95%; /* Full width with small margins on extra small screens */
+        padding: 12px 16px; /* Further reduce padding */
+    }
+
+    .title {
+        font-size: 18px; /* Make titles smaller */
+    }
+
+    .description {
+        font-size: 14px; /* Make descriptions smaller */
+    }
+
+    .skill {
+        font-size: 16px; /* Reduce skill font size */
+        padding: 2px 10px;
+    }
+
+    .link {
+        font-size: 18px; /* Reduce link font size */
+        padding: 2px 12px;
+    }
+}

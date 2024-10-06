@@ -1,0 +1,87 @@
+@import "../../var.css";
+/* .box{
+    background: black;
+    margin: 5px;
+    padding: 6px;
+    width: fit-content;
+    z-index: -2;
+} */
+.title{
+    font-family: var(--font-roboto);
+    font-size: 55px;
+    text-align: center;
+    color: var(--color-text);
+    font-weight: bold;
+}
+.out{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+    top: 40px;
+  }
+  .cardContainer {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+  .card {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(48, 61, 113, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    cursor: pointer;
+  }
+  .city {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1.2px;
+    color: white;
+    font-family: cursive;
+  }
+  
+  .weather {
+    font-family: arial;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    color: rgb(197, 197, 197);
+  }
+  .cardContainer::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: rgb(142, 151, 220);
+    z-index: -1;
+    border-radius: 50%;
+    left: 100px;
+    top: 50px;
+    transition: all 1s;
+  }
+  
+  .cardContainer:hover::before {
+    transform: translate(-50px, 50px);
+  }
+  
+  @media screen and (max-width:830px) {
+    .out{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding: none;
+        margin: auto;
+    }
+    
+  }

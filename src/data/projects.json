@@ -1,0 +1,24 @@
+[
+    {
+        "title":"Safar.com",
+        "imgSrc":"https://i.ibb.co/LJJ167L/Screenshot-2024-09-22-134152.png",
+        "description":"Indian travelling website exploring all states of India. Showcasing the top 10 Tourist places in India according to categories.",
+        "skills":["HTML","CSS","JS"],
+        "demo":"https://pradnyakulkarni2005.github.io/Web_Project/"
+        
+    },
+    {
+        "title":"Vidya.com",
+        "imgSrc":"https://i.ibb.co/L9y9PpH/Screenshot-2024-09-22-134417.png",
+        "description":"An educational website including syllabus,pyqs for competitive exams like JEE,NEET,MHTCET,Board question papers and a Proper guidance",
+        "skills":["HTML","CSS"],
+        "demo":"https://pradnyakulkarni2005.github.io/web-miniproject/Miniproject.html"
+    },
+    {
+        "title":"Number guessing game",
+        "imgSrc":"https://i.ibb.co/S3pvGn2/Screenshot-2024-09-22-134601.png",
+        "description":"Game in which we have to guess the randomly selected number correctly and accordingly scores are displayed",
+        "skills":["HTML","CSS","JS"],
+        "demo":"https://pradnyakulkarni2005.github.io/Javascript_Project/game.html"
+    }
+]

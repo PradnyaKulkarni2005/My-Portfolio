@@ -1,0 +1,83 @@
+@import "../../var.css";
+
+/* Main container styling */
+.container {
+    margin-top: 76px;
+    color: var(--color-text);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Title styling */
+.title {
+    font-family: var(--font-roboto);
+    font-size: 55px;
+    text-align: center;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* Projects container */
+.projects {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+}
+
+/* Responsive Design Adjustments */
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .title {
+        font-size: 45px; /* Adjust title size for tablet */
+    }
+
+    .projects {
+        gap: 30px; /* Smaller gap between project cards */
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 40px; /* Adjust margin for mobile */
+    }
+
+    .title {
+        font-size: 35px; /* Adjust title font size for mobile */
+    }
+
+    .projects {
+        flex-direction: column; /* Stack projects vertically */
+        gap: 20px; /* Reduced gap for better spacing on mobile */
+    }
+}
+
+/* Extra Small Mobile View */
+@media screen and (max-width: 480px) {
+    .container {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 30px; /* Further reduce top margin */
+    }
+
+    .title {
+        font-size: 28px; /* Further reduce title size */
+    }
+
+    .projects {
+        flex-direction: column; /* Continue stacking projects */
+        gap: 15px; /* Smaller gap between cards on extra small screens */
+    }
+}

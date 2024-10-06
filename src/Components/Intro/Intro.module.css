@@ -1,0 +1,204 @@
+@import "../../var.css";
+
+/* Main container styling */
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 49px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Content styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+/* Title styling */
+.title {
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0)) 120%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Description styling */
+.description {
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px;
+}
+
+/* Contact Button */
+.contactBtn {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+}
+
+/* Image floating effect */
+.introimg img {
+    width: 140%;
+    z-index: 1;
+    border-radius: 100%;
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+/* Top and Bottom Blurs */
+.topBlur {
+    position: absolute;
+    width: 30vw;
+    height: 50vw;
+    min-width: 350px;
+    min-height: 350px;
+    top: -128px;
+    left: -10vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute;
+    width: 20vw;
+    height: 30vw;
+    min-width: 350px;
+    min-height: 250px;
+    top: 246px;
+    left: -25vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(50px);
+    z-index: 0;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .title {
+        font-size: 60px; /* Reduce font size for tablet */
+    }
+
+    .description {
+        font-size: 25px; /* Adjust description size */
+    }
+
+    .introimg img {
+        width: 100%; /* Make the image smaller */
+    }
+
+    .contactBtn {
+        font-size: 25px;
+        padding: 15px 24px;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse; /* Stack content and image */
+        margin-left: 5%;
+        margin-right: 5%;
+        align-items: center; /* Center align items */
+    }
+
+    .content {
+        align-items: center; /* Center content */
+    }
+
+    .title {
+        font-size: 50px; /* Adjust title size */
+        text-align: center; /* Center title */
+    }
+
+    .description {
+        font-size: 22px; /* Adjust description size */
+        text-align: center; /* Center description */
+    }
+
+    .introimg img {
+        width: 60%; /* Reduce image width */
+        margin: 20px 0; /* Add some space around the image */
+    }
+
+    .contactBtn {
+        font-size: 22px;
+        padding: 14px 20px;
+    }
+
+    .topBlur, .bottomBlur {
+        width: 50vw;
+        height: 50vw;
+        filter: blur(80px); /* Reduce blur intensity for smaller screens */
+    }
+}
+
+/* Extra Small Mobile View */
+@media screen and (max-width: 480px) {
+    .container {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 30px;
+    }
+
+    .title {
+        font-size: 38px; /* Reduce title size further */
+        text-align: center;
+    }
+
+    .description {
+        font-size: 18px; /* Smaller description text */
+        text-align: center;
+    }
+
+    .introimg img {
+        width: 80%; /* Further reduce image size */
+        margin: 20px auto; /* Center the image */
+    }
+
+    .contactBtn {
+        font-size: 20px;
+        padding: 12px 18px;
+    }
+
+    .topBlur, .bottomBlur {
+        width: 40vw;
+        height: 40vw;
+        filter: blur(60px); /* Reduce blur intensity */
+    }
+}

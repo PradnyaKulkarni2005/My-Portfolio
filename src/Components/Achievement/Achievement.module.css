@@ -1,0 +1,110 @@
+@import "../../var.css";
+
+.container {
+    color: var(--color-text);
+    margin-top: 79px;
+}
+
+/* Flex wrapper for content */
+.wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Title styles */
+.title {
+    font-family: var(--font-roboto);
+    font-size: 55px;
+    text-align: center;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* Content styling */
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 14px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* Skills styling */
+.skills {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    font-family: var(--font-roboto);
+}
+
+/* Skill item styling */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+}
+
+/* Left section styling */
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 235px;
+    float: left;
+}
+
+/* Right section styling */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 235px;
+    float: right;
+}
+
+/* Logo styles */
+.logo {
+    height: 160px;
+    width: 200px;
+}
+
+/* Mobile and tablet responsiveness */
+@media screen and (max-width: 830px) {
+    .right, .left {
+        display: none; /* Hide the left and right sections on smaller screens */
+    }
+
+    .content {
+        width: 100%; /* Make the content take full width */
+        justify-content: center; /* Center content on smaller screens */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .skills {
+        width: 100%; /* Adjust skill width to fit smaller screens */
+        font-size: 20px; /* Reduce font size for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    /* Responsive skill item adjustments */
+    .skill {
+        gap: 5px; /* Reduce gap for skill items */
+    }
+}
+
+/* Additional mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 40px; /* Further reduce title font size */
+    }
+
+    .skills {
+        font-size: 18px; /* Further reduce skill font size */
+        gap: 10px; /* Further reduce gap */
+    }
+}
