@@ -8,7 +8,7 @@
     flex-direction: column; /* Change to column for better stacking on smaller screens */
     justify-content: center;
     align-items: center; /* Center items horizontally */
-    width: 100vw;
+    width: 100%;
     padding: 58px 10%;
     gap: 20px; /* Increase gap for better spacing */
 }
@@ -72,6 +72,9 @@
 
 /* Additional mobile responsiveness */
 @media screen and (max-width: 480px) {
+    .end{
+        width: 100%;
+    }
     .title {
         font-size: 30px; /* Further reduce title size */
     }

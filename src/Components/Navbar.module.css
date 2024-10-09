@@ -1,7 +1,6 @@
 @import '../var.css';
 
-
-.navbar{
+.navbar {
     width: 100%;
     position: relative;
     display: flex;
@@ -9,37 +8,53 @@
     justify-content: space-between;
     padding-top: 61px;
     z-index: 2;
-    /* margin: 0 10%; */
-    
+    margin: 6px;
 }
-.title{
+
+.title {
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-text);
 }
-.menu{
-    display: flex;
 
+.menu {
+    display: flex;
+    flex-direction: row;
 }
 
-.menu_items a{
+.menu_items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none; /* Removes round disks (list markers) */
+    padding: 0; /* Removes any default padding */
+    margin: 0; /* Ensures no extra margin is added */
+}
+
+.menu_items a {
     font-size: 25px;
     color: var(--color-text);
     text-decoration: none;
-
+    font-weight: 500; /* You can add more styles here */
 }
-ion-icon {
-    color: white;
-  }
-  
 
-@media screen and (max-width:830px){
-    .navbar{
+ion-icon {
+    color: white; /* Ensures icon color is white */
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+/* For Mobile View */
+@media screen and (max-width: 830px) {
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-    .menu{
+    
+
+    .menu {
         position: absolute;
         right: 0;
         margin-right: 10%;
@@ -47,34 +62,34 @@ ion-icon {
         align-items: flex-end;
         gap: 11px;
         z-index: 3;
-    }   
-    ion-icon   {
-        display: block;
-        cursor: pointer;
     }
-    .menu_items{
-        display:none;
+
+    .menu_items {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end; /* Adjust to the right side for mobile */
         gap: 13px;
         border-radius: 10px;
         background: linear-gradient(
             0deg,
-            rgba(25,55,109) 0%,
-            rgba(25,55,109,1) 100% 
+            rgba(25, 55, 109, 1) 0%,
+            rgba(25, 55, 109, 1) 100%
         );
         padding: 24px 33px;
-        box-shadow: 0 0 4px  rgba(0,0,0,25);
-        
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+        list-style: none; /* Remove round disks (list markers) in mobile view */
     }
-    .menuOpen{
+
+    .menuOpen {
         display: flex;
         z-index: 1;
     }
-    .menu_items{
-    display: flex;
-    gap: 47px;
-    list-style: none;
-}
 
+    .menu_items a {
+        color: white; /* Ensure text color is white for mobile view */
+        font-size: 22px;
+        padding: 10px;
+        
+        border-bottom: 1px solid rgba(246, 235, 235, 0.608);
+    }
 }

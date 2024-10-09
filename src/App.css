@@ -10,8 +10,8 @@
 }
 /* Global Styles */
 body {
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 15px;
   box-sizing: border-box;
 }
 
@@ -44,7 +44,8 @@ body {
   .content,
   .skills {
       width: 100%; /* Full width for mobile */
-      padding: 0 10px; /* Optional: Add some padding */
+      padding: 0 10px;
+      justify-content: center;/* Optional: Add some padding */
   }
 
   .card {
