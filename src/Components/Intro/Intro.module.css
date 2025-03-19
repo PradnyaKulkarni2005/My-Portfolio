@@ -1,6 +1,4 @@
 @import "../../var.css";
-
-/* Main container styling */
 .container {
     position: relative;
     display: flex;
